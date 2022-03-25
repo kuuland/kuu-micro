@@ -1,0 +1,85 @@
+.navbar {
+  float: right;
+  padding: 0 5px 0 20px;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .item {
+    display: inline-block;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(255, 255, 255);
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    .org {
+      background-color: #00000026;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+
+      > span {
+        margin: 0 8px;
+      }
+
+      > i {
+        &:first-child {
+          font-size: 16px;
+        }
+
+        font-size: 12px;
+      }
+    }
+  }
+
+  @userinfo-height: 32px;
+
+  .userinfo {
+    cursor: pointer;
+    height: @userinfo-height;
+    line-height: @userinfo-height;
+    display: inline-block;
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 14px;
+    }
+
+    .username {
+      padding: 0px 8px;
+
+      > i {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+:global(.ant-dropdown-menu-item) {
+  > a > span {
+    margin-left: 5px;
+  }
+}
+
+.changePasswdModal {
+  .changePasswdbox {
+    padding: 20px !important;
+  }
+
+  .passwdinput {
+    margin-bottom: 10px !important;
+  }
+}

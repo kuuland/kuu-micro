@@ -1,0 +1,128 @@
+@header-height: 50px;
+.layout {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: red;
+
+  .header {
+    height: @header-height;
+    line-height: @header-height;
+    width: 100%;
+    padding: 0px;
+    color: #fff !important;
+    background: transparent;
+
+    .appName {
+      color: #fff !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      user-select: none;
+      font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      box-sizing: border-box;
+      font-size: 24px;
+    }
+  }
+
+  .sider {
+    overflow: hidden;
+    left: 0;
+    box-shadow: 2px 0px 10px 0px rgba(159, 170, 195, 0.4);
+    background: #f9f9f9;
+    display: flex;
+    height: 100vh;
+
+    :global(.ant-layout-sider-children) {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    border-right: 1px solid transparent;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-height: calc(100% - @header-height);
+
+    &:hover {
+      overflow-y: auto;
+    }
+  }
+
+  .trigger:hover {
+    color: #1890ff;
+  }
+
+  .menuTitle {
+    user-select: none;
+  }
+
+  .menuTitle > i {
+    padding-left: 10px;
+  }
+}
+
+.loginAs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  border: 10px solid #ff4d4f;
+  pointer-events: none;
+}
+
+.aux {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0.2;
+  line-height: 80vh;
+  background-color: #6d6b6b;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  > p {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    word-wrap: break-word;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+  }
+}
+
+:global {
+
+  .ant-layout {
+    background: #f9f9f9;
+  }
+
+  @trigger-size: 20px;
+
+  .kuu-sider-trigger {
+    font-size: @trigger-size;
+    cursor: pointer;
+    transition: color .3s;
+    z-index: 1;
+    position: absolute;
+    left: 15px;
+    top: @header-height/2 - (@trigger-size/2 + 1px);
+    color: #fff!important;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
