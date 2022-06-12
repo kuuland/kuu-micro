@@ -12,7 +12,7 @@ export default {
     hmr: true,
     immer: false,
   },
-  title: 'AI CRM',
+  title: 'kuu micro',
   locale: {
     default: 'en-US',
     baseNavigator: true,
@@ -26,11 +26,11 @@ export default {
   },
   proxy: {
     '/gw/api': {
-      target: 'http://127.0.0.1:8080/',
+      target: 'http://127.0.0.1:3000/',
       changeOrigin: true,
     },
     '/assets': {
-      target: 'http://127.0.0.1:8080/',
+      target: 'http://127.0.0.1:3000//',
       changeOrigin: true
     }
   },

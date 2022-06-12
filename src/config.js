@@ -3,9 +3,9 @@ import { Icon } from 'antd'
 export default {
   // shortName: <img src={require('@/assets/logo.jpg')} height='50px' />,
   // fullName: <img src={require('@/assets/logo.jpg')} height='50px' />,
-  shortName: 'AI CRM',
-  fullName: 'AI CRM',
-  htmlTitle: 'AI CRM',
+  shortName: 'kuu micro',
+  fullName: 'kuu micro',
+  htmlTitle: 'kuu micro',
   simplePages: ['/login', '/test', '/app_login', '/app_doc', '/forgot'],
   whiteRoutes: ['/app_login', '/app_doc', '/forgot'],
   noBreadcrumbsRoutes: [],
